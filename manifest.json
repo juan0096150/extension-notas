@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Mis Notas",
+    "version": "2.6",
+    "description": "Una extensión simple para tomar notas",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "64": "icons/icon64.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "64": "icons/icon64.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": ["storage", "activeTab","notifications","alarms","tabs"],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["alarm.mp3","reminder-alert.html", "reminder-alert.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
