@@ -218,3 +218,29 @@ li button:hover {
 #clear:hover {
   background-color: #c9302c;
 }
+
+.calculator-history {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculator-history h3 {
+    margin-top: 0;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#historyList li {
+    margin-bottom: 5px;
+}
+
+#clearHistory {
+    margin-top: 10px;
+}

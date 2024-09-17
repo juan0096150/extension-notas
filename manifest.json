@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Mis Notas",
-    "version": "2.6",
+    "version": "2.7",
     "description": "Una extensión simple para tomar notas",
     "action": {
         "default_popup": "popup.html",

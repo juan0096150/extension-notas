@@ -9,61 +9,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<div class="container">
-    <h1>Notas y Recordatorios Sena</h1>
-    <div class="tabs">
-        <button id="exportBtn">Exportar</button>
-        <button id="importBtn">Importar</button>
-    </div>
-    <div class="tabs">
-        <button class="tab-button active" data-tab="notes"><i class="fas fa-sticky-note"></i> Notas</button>
-        <button class="tab-button" data-tab="reminders"><i class="fas fa-bell"></i> Recordatorios</button>
-        <button class="tab-button" data-tab="calculator"><i class="fas fa-calculator"></i> Calculadora</button>
-    </div>
-    <div id="notesSection" class="tab-content active">
-        <form id="noteForm">
-            <input type="text" id="noteTitle" placeholder="Título de la nota" required>
-            <textarea id="noteContent" placeholder="Contenido de la nota" required></textarea>
-            <input type="file" id="noteFile" accept="image/*, .pdf, .doc, .docx">
-            <input type="text" id="noteLink" placeholder="Enlace (opcional)">
-            <button type="submit"><i class="fas fa-save"></i> Guardar Nota</button>
-        </form>
-        <ul id="notesList"></ul>
-    </div>
-    <div id="remindersSection" class="tab-content">
-        <form id="reminderForm">
-            <input type="text" id="reminderTitle" placeholder="Título del recordatorio" required>
-            <textarea id="reminderDescription" placeholder="Descripción del recordatorio"></textarea>
-            <input type="datetime-local" id="reminderDateTime" required>
-            <button type="submit"><i class="fas fa-bell"></i> Agregar Recordatorio</button>
-        </form>
-        <ul id="remindersList"></ul>
-    </div>
-    <div id="calculatorSection" class="tab-content">
-        <div class="calculator">
-            <input type="text" id="display" readonly>
-            <div class="buttons">
-                <button class="calc-btn">7</button>
-                <button class="calc-btn">8</button>
-                <button class="calc-btn">9</button>
-                <button class="calc-btn operator">+</button>
-                <button class="calc-btn">4</button>
-                <button class="calc-btn">5</button>
-                <button class="calc-btn">6</button>
-                <button class="calc-btn operator">-</button>
-                <button class="calc-btn">1</button>
-                <button class="calc-btn">2</button>
-                <button class="calc-btn">3</button>
-                <button class="calc-btn operator">*</button>
-                <button class="calc-btn">0</button>
-                <button class="calc-btn">.</button>
-                <button class="calc-btn operator">/</button>
-                <button id="equals">=</button>
-                <button id="clear">C</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="js/script.js"></script>
+  <div class="container">
+      <h1>Notas y Recordatorios Sena</h1>
+      <div class="tabs">
+          <button id="exportBtn">Exportar</button>
+          <button id="importBtn">Importar</button>
+      </div>
+      <div class="tabs">
+          <button class="tab-button active" data-tab="notes"><i class="fas fa-sticky-note"></i> Notas</button>
+          <button class="tab-button" data-tab="reminders"><i class="fas fa-bell"></i> Recordatorios</button>
+          <button class="tab-button" data-tab="calculator"><i class="fas fa-calculator"></i> Calculadora</button>
+      </div>
+      <div id="notesSection" class="tab-content active">
+          <form id="noteForm">
+              <input type="text" id="noteTitle" placeholder="Título de la nota" required>
+              <textarea id="noteContent" placeholder="Contenido de la nota" required></textarea>
+              <input type="file" id="noteFile" accept="image/*, .pdf, .doc, .docx">
+              <input type="text" id="noteLink" placeholder="Enlace (opcional)">
+              <button type="submit"><i class="fas fa-save"></i> Guardar Nota</button>
+          </form>
+          <ul id="notesList"></ul>
+      </div>
+      <div id="remindersSection" class="tab-content">
+          <form id="reminderForm">
+              <input type="text" id="reminderTitle" placeholder="Título del recordatorio" required>
+              <textarea id="reminderDescription" placeholder="Descripción del recordatorio"></textarea>
+              <input type="datetime-local" id="reminderDateTime" required>
+              <button type="submit"><i class="fas fa-bell"></i> Agregar Recordatorio</button>
+          </form>
+          <ul id="remindersList"></ul>
+      </div>
+      <div id="calculatorSection" class="tab-content">
+          <div class="calculator">
+              <input type="text" id="display" readonly>
+              <div class="buttons">
+                  <button class="calc-btn">7</button>
+                  <button class="calc-btn">8</button>
+                  <button class="calc-btn">9</button>
+                  <button class="calc-btn operator">+</button>
+                  <button class="calc-btn">4</button>
+                  <button class="calc-btn">5</button>
+                  <button class="calc-btn">6</button>
+                  <button class="calc-btn operator">-</button>
+                  <button class="calc-btn">1</button>
+                  <button class="calc-btn">2</button>
+                  <button class="calc-btn">3</button>
+                  <button class="calc-btn operator">*</button>
+                  <button class="calc-btn">0</button>
+                  <button class="calc-btn">.</button>
+                  <button class="calc-btn operator">/</button>
+                  <button id="equals">=</button>
+                  <button id="clear">C</button>
+              </div>
+          </div>
+          <div class="calculator-history">
+              <h3>Historial de operaciones</h3>
+              <ul id="historyList"></ul>
+              <button id="clearHistory">Limpiar historial</button>
+          </div>
+      </div>
+  </div>
+  <script src="js/file-handler.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/reminders.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
