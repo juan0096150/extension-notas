@@ -1,24 +1,110 @@
+:root {
+  --bg-color: #9BF2EA;
+  --text-color: #275950;
+  --container-bg: #ffffff;
+  --primary-color: #41BFB3;
+  --secondary-color: #2A8C82;
+  --accent-color: #275950;
+  --input-border: #41BFB3;
+  --button-text: #ffffff;
+  --list-item-bg: #9BF2EA;
+  --list-item-border: #41BFB3;
+  --delete-button-bg: #f93734;
+  --delete-button-hover: #ff0000;
+  --import-export-bg: #275950;
+  --import-export-hover: #1A3C34;
+  --calculator-bg: #f0f0f0;
+  --calculator-display-bg: #fff;
+  --calculator-display-border: #ccc;
+  --calculator-button-bg: #e0e0e0;
+  --calculator-button-hover: #d0d0d0;
+  --calculator-operator-bg: #f0ad4e;
+  --calculator-operator-hover: #ec971f;
+  --calculator-equals-bg: #5bc0de;
+  --calculator-equals-hover: #31b0d5;
+  --calculator-clear-bg: #d9534f;
+  --calculator-clear-hover: #c9302c;
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --container-bg: #2c2c2c;
+  --primary-color: #41BFB3;
+  --secondary-color: #2A8C82;
+  --accent-color: #9BF2EA;
+  --input-border: #41BFB3;
+  --button-text: #ffffff;
+  --list-item-bg: #3a3a3a;
+  --list-item-border: #41BFB3;
+  --delete-button-bg: #f93734;
+  --delete-button-hover: #ff0000;
+  --import-export-bg: #41BFB3;
+  --import-export-hover: #2A8C82;
+  --calculator-bg: #333333;
+  --calculator-display-bg: #4a4a4a;
+  --calculator-display-border: #555555;
+  --calculator-button-bg: #4a4a4a;
+  --calculator-button-hover: #5a5a5a;
+  --calculator-operator-bg: #f0ad4e;
+  --calculator-operator-hover: #ec971f;
+  --calculator-equals-bg: #5bc0de;
+  --calculator-equals-hover: #31b0d5;
+  --calculator-clear-bg: #d9534f;
+  --calculator-clear-hover: #c9302c;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #9BF2EA; /* Lighter aquamarine background */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
   width: 340px;
   padding: 20px;
-  color: #275950; /* Dark green for text */
-  background-color: #ffffff;
+  background-color: var(--container-bg);
   border-radius: 12px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #2A8C82; /* Darker aquamarine for heading */
+  color: var(--secondary-color);
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
+}
+
+.theme-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#themeToggle {
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#themeToggle:hover {
+  background-color: var(--secondary-color);
+}
+
+#themeColor {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .tabs {
@@ -30,19 +116,18 @@ h1 {
 .tab-button {
   flex: 1;
   padding: 10px;
-  background-color: #41BFB3; /* Medium aquamarine for tabs */
+  background-color: var(--primary-color);
   border: none;
   cursor: pointer;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--button-text);
   transition: background-color 0.3s, color 0.3s;
   border-radius: 6px;
   margin: 0 5px;
 }
 
 .tab-button.active {
-  background-color: #2A8C82; /* Darker aquamarine for active tab */
-  color: #ffffff;
+  background-color: var(--secondary-color);
 }
 
 .tab-content {
@@ -61,15 +146,17 @@ form {
 
 input[type="text"], textarea, input[type="file"], input[type="datetime-local"] {
   padding: 12px;
-  border: 1px solid #41BFB3;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   font-size: 14px;
   outline: none;
   transition: border-color 0.3s;
+  background-color: var(--container-bg);
+  color: var(--text-color);
 }
 
 input[type="text"]:focus, textarea:focus, input[type="file"]:focus, input[type="datetime-local"]:focus {
-  border-color: #2A8C82;
+  border-color: var(--secondary-color);
 }
 
 button {
@@ -77,8 +164,8 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #41BFB3;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--button-text);
   border: none;
   padding: 12px;
   cursor: pointer;
@@ -88,7 +175,7 @@ button {
 }
 
 button:hover {
-  background-color: #2A8C82;
+  background-color: var(--secondary-color);
 }
 
 ul {
@@ -97,11 +184,11 @@ ul {
 }
 
 li {
-  background-color: #9BF2EA;
+  background-color: var(--list-item-bg);
   padding: 12px;
-  border: 1px solid #41BFB3;
+  border: 1px solid var(--list-item-border);
   border-radius: 6px;
-  border-left: 4px solid #2A8C82;
+  border-left: 4px solid var(--secondary-color);
   margin-bottom: 12px;
   display: flex;
   flex-direction: column;
@@ -110,31 +197,31 @@ li {
 
 li span {
   font-weight: bold;
-  color: #275950;
+  color: var(--text-color);
 }
 
 li p {
   margin: 5px 0;
-  color: #275950;
+  color: var(--text-color);
 }
 
 li button {
-  background-color: #f93734; /* Tomato red for delete button */
+  background-color: var(--delete-button-bg);
   border: none;
   padding: 6px 12px;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--button-text);
   border-radius: 4px;
   font-size: 12px;
   transition: background-color 0.3s;
 }
 
 li button:hover {
-  background-color: #ff0000; /* Darker red on hover */
+  background-color: var(--delete-button-hover);
 }
 
 #exportBtn, #importBtn {
-  background-color: #275950; /* Dark green for import/export buttons */
+  background-color: var(--import-export-bg);
   margin-bottom: 10px;
   padding: 10px 15px;
   font-size: 14px;
@@ -143,7 +230,7 @@ li button:hover {
 }
 
 #exportBtn:hover, #importBtn:hover {
-  background-color: #1A3C34; /* Even darker green on hover */
+  background-color: var(--import-export-hover);
 }
 
 /* Estilos para la calculadora */
@@ -151,7 +238,7 @@ li button:hover {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  background-color: #f0f0f0;
+  background-color: var(--calculator-bg);
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -164,9 +251,10 @@ li button:hover {
   text-align: right;
   padding: 5px;
   margin-bottom: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--calculator-display-bg);
+  border: 1px solid var(--calculator-display-border);
   border-radius: 4px;
+  color: var(--text-color);
 }
 
 .buttons {
@@ -179,68 +267,72 @@ li button:hover {
   padding: 15px;
   font-size: 18px;
   text-align: center;
-  background-color: #e0e0e0;
+  background-color: var(--calculator-button-bg);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  color: var(--text-color);
 }
 
 .calc-btn:hover, #equals:hover, #clear:hover {
-  background-color: #d0d0d0;
+  background-color: var(--calculator-button-hover);
 }
 
 .operator {
-  background-color: #f0ad4e;
-  color: white;
+  background-color: var(--calculator-operator-bg);
+  color: var(--button-text);
 }
 
 .operator:hover {
-  background-color: #ec971f;
+  background-color: var(--calculator-operator-hover);
 }
 
 #equals {
-  background-color: #5bc0de;
-  color: white;
+  background-color: var(--calculator-equals-bg);
+  color: var(--button-text);
   grid-column: span 2;
 }
 
 #equals:hover {
-  background-color: #31b0d5;
+  background-color: var(--calculator-equals-hover);
 }
 
 #clear {
-  background-color: #d9534f;
-  color: white;
+  background-color: var(--calculator-clear-bg);
+  color: var(--button-text);
   grid-column: span 2;
 }
 
 #clear:hover {
-  background-color: #c9302c;
+  background-color: var(--calculator-clear-hover);
 }
 
 .calculator-history {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--container-bg);
 }
 
 .calculator-history h3 {
-    margin-top: 0;
+  margin-top: 0;
+  color: var(--text-color);
 }
 
 #historyList {
-    list-style-type: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #historyList li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+  color: var(--text-color);
 }
 
 #clearHistory {
-    margin-top: 10px;
+  margin-top: 10px;
 }

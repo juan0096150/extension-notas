@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeReminders();
     initializeCalculator();
     initializeExportImport();
+    initializeTheme();
 });
 
 function initializeExportImport() {
