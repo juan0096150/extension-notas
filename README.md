@@ -14,7 +14,7 @@
 6. [Licencia](#licencia)
 7. [Contribución de IA](#contribución-de-ia)
 
-## Descripción
+## 📝 Descripción
 
 **Notas-Crub** es una extensión de navegador diseñada para facilitar la toma de notas, recordatorios y pequeñas tareas diarias con una interfaz amigable y simple. La extensión permite al usuario crear, gestionar y almacenar notas, establecer recordatorios con alertas sonoras, y organizar su información de forma intuitiva.
 
