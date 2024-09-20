@@ -1,5 +1,19 @@
 # 📝 Notas-Crub - Extensión de Navegador
 
+## Índice
+
+1. [Descripción](#descripción)
+2. [Características](#características)
+3. [Estructura del Proyecto](#estructura-del-proyecto)
+4. [Instalación](#instalación)
+5. [Uso](#uso)
+    - [Notas](#notas)
+    - [Recordatorios](#recordatorios)
+    - [Temas](#temas)
+    - [Calculadora](#calculadora)
+6. [Licencia](#licencia)
+7. [Contribución de IA](#contribución-de-ia)
+
 ## Descripción
 
 **Notas-Crub** es una extensión de navegador diseñada para facilitar la toma de notas, recordatorios y pequeñas tareas diarias con una interfaz amigable y simple. La extensión permite al usuario crear, gestionar y almacenar notas, establecer recordatorios con alertas sonoras, y organizar su información de forma intuitiva.
@@ -61,9 +75,21 @@ notas-crub/
 
 ## 📚 Uso
 
-- **Notas**: Abre la ventana emergente de la extensión para escribir y organizar tus notas.
-- **Recordatorios**: Configura recordatorios que activarán una alerta con un sonido 🔔 (incluido en `alarm.mp3`).
-- **Temas**: Modifica el tema de la extensión a través del archivo `theme.js`.
+### Notas
+
+Abre la ventana emergente de la extensión para escribir, editar y gestionar tus notas.
+
+### Recordatorios
+
+Configura recordatorios en la ventana emergente de la extensión. Cuando se alcance la hora configurada, recibirás una alerta visual y sonora (incluida en `alarm.mp3`).
+
+### Temas
+
+Modifica el estilo visual de la extensión utilizando el archivo `theme.js` para ajustar el tema a tu preferencia.
+
+### Calculadora
+
+La extensión incluye una **calculadora integrada** que permite realizar operaciones básicas sin necesidad de salir de la ventana emergente. Solo ingresa tus operaciones directamente y obtén resultados al instante.
 
 ## 📄 Licencia
 
